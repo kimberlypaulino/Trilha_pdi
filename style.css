@@ -1,0 +1,182 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+    background-color: #f0f4f8;
+    color: #1a202c;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+header, main, footer {
+    width: 100%;
+}
+
+header {
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+header h1 {
+    font-size: 2rem;
+    color: #0056b3;
+    margin-bottom: 12px;
+}
+
+nav {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    padding: 8px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #0056b3;
+    font-weight: bold;
+    transition: color 0.2s;
+}
+
+nav a:hover {
+    color: #00875a;
+}
+
+main {
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 25px;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+section {
+    border: 2px solid #e2e8f0;
+    border-left: 6px solid #00875a;
+    border-radius: 8px;
+    padding: 20px;
+    background-color: #f8fafc;
+}
+
+.section1 {
+    display: flex;
+    gap: 30px;
+    align-items: flex-start;
+}
+
+.left-box {
+    width: 25%;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.left-box h2 {
+    font-size: 1.2rem;
+    color: #0056b3;
+    text-align: center;
+}
+
+.left-box img {
+    width: 100%;
+    max-width: 280px;
+    height: auto;
+    margin: 0 auto;
+    object-fit: contain;
+}
+
+.right-box {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.right-box p, .right-box ul {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.right-box ul {
+    list-style-position: inside;
+}
+
+.right-box li {
+    margin-bottom: 6px;
+}
+
+.section2, .section-professor, .section-responsaveis, .section-direcao {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.section2 h2, .section-professor h2, .section-responsaveis h2, .section-direcao h2 {
+    font-size: 1.2rem;
+    color: #0056b3;
+}
+
+.section2 p, .section-professor p, .section-responsaveis p, .section-direcao p {
+    font-size: 1rem;
+    line-height: 1.6;
+}
+
+.topo-informacoes {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.metas-container {
+    display: flex;
+    justify-content: space-between;
+    gap: 30px;
+}
+
+.metas-lista, .status-lista, .lista-turmas {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.metas-lista { width: 60%; }
+.status-lista { width: 35%; }
+
+.metas-lista li, .status-lista li, .lista-turmas li {
+    font-size: 1rem;
+    line-height: 1.5;
+}
+
+.cards-indicadores {
+    display: flex;
+    justify-content: flex-start;
+    gap: 40px;
+    margin-top: 5px;
+}
+
+footer {
+    border: 2px solid #0056b3;
+    border-radius: 10px;
+    background-color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    font-size: 0.9rem;
+    color: #4a5568;
+}
