@@ -1,13 +1,24 @@
+/* ==========================================================================
+   1. IMPORTAÇÃO DE TIPOGRAFIA PROFISSIONAL
+   - Importamos a fonte 'Inter' do Google Fonts para substituir a Arial.
+   - Ela melhora drasticamente a leitura em telas e dá visual de software moderno.
+   ========================================================================== */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+/* ==========================================================================
+   2. CONFIGURAÇÕES GERAIS E RESET
+   ========================================================================== */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
 }
 
 body {
-    background-color: #f0f4f8;
-    color: #1a202c;
+    /* MUDANÇA: Fundo cinza-azulado bem suave para destacar o conteúdo branco */
+    background-color: #f1f5f9;
+    color: #1e293b;
     padding: 20px;
     display: flex;
     flex-direction: column;
@@ -15,64 +26,108 @@ body {
     width: 100%;
 }
 
+/* CONTAINERS PRINCIPAIS EM 100% DA LARGURA */
 header, main, footer {
     width: 100%;
 }
 
+/* ==========================================================================
+   3. HEADER & NAVBAR (NAVBAR MODERNA COM EFITO HOVER)
+   ========================================================================== */
 header {
-    border: 2px solid #0056b3;
-    border-radius: 10px;
+    border: 1.5px solid #0284c7;
+    border-radius: 12px;
     background-color: #ffffff;
     padding: 20px;
     text-align: center;
     margin-bottom: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    /* MUDANÇA: Adicionada elevação suave com box-shadow */
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
 }
 
 header h1 {
     font-size: 2rem;
-    color: #0056b3;
-    margin-bottom: 12px;
+    font-weight: 700;
+    color: #0284c7; /* Azul profissional para identidade da marca */
+    margin-bottom: 14px;
+    letter-spacing: -0.5px;
 }
 
 nav {
     display: flex;
     justify-content: center;
-    gap: 30px;
-    padding: 8px;
+    gap: 15px;
+    padding: 4px;
+    flex-wrap: wrap;
 }
 
+/* MUDANÇA: Links estilizados como pílulas/botões interativos com transição suave */
 nav a {
     text-decoration: none;
-    color: #0056b3;
-    font-weight: bold;
-    transition: color 0.2s;
+    color: #0284c7;
+    font-weight: 600;
+    font-size: 0.95rem;
+    padding: 8px 18px;
+    border-radius: 20px;
+    background-color: #f0f9ff;
+    transition: all 0.2s ease-in-out;
 }
 
 nav a:hover {
-    color: #00875a;
+    background-color: #0284c7;
+    color: #ffffff;
+    transform: translateY(-2px); /* Efeito sutil de elevação ao passar o mouse */
 }
 
+/* ==========================================================================
+   4. MAIN E SEÇÕES (ESTRUTURA DE CARDS)
+   ========================================================================== */
 main {
-    border: 2px solid #0056b3;
-    border-radius: 10px;
+    border: 1.5px solid #0284c7;
+    border-radius: 12px;
     background-color: #ffffff;
-    padding: 25px;
+    padding: 24px;
     margin-bottom: 20px;
     display: flex;
     flex-direction: column;
     gap: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
 }
 
+/* BORDAS EXCLUSIVAS NAS SECTIONS
+   MUDANÇA: Borda lateral esquerda mais espessa para destaque visual dos módulos */
 section {
-    border: 2px solid #e2e8f0;
-    border-left: 6px solid #00875a;
-    border-radius: 8px;
+    border: 1px solid #cbd5e1;
+    border-left: 6px solid #10b981; /* Detalhe verde de progresso e acolhimento */
+    border-radius: 10px;
     padding: 20px;
     background-color: #f8fafc;
+    transition: box-shadow 0.2s ease;
 }
 
+section:hover {
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.03);
+}
+
+/* ==========================================================================
+   5. TIPOGRAFIA E ELEMENTOS INTERNOS
+   ========================================================================== */
+h2 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #0369a1;
+    margin-bottom: 10px;
+}
+
+p, ul, li {
+    font-size: 1rem;
+    line-height: 1.6;
+    color: #334155;
+}
+
+/* ==========================================================================
+   6. PÁGINA INICIAL (INDEX.HTML)
+   ========================================================================== */
 .section1 {
     display: flex;
     gap: 30px;
@@ -87,8 +142,6 @@ section {
 }
 
 .left-box h2 {
-    font-size: 1.2rem;
-    color: #0056b3;
     text-align: center;
 }
 
@@ -98,6 +151,7 @@ section {
     height: auto;
     margin: 0 auto;
     object-fit: contain;
+    border-radius: 8px;
 }
 
 .right-box {
@@ -107,33 +161,30 @@ section {
     gap: 12px;
 }
 
-.right-box p, .right-box ul {
-    font-size: 1rem;
-    line-height: 1.6;
-}
-
 .right-box ul {
     list-style-position: inside;
+    margin-top: 5px;
 }
 
 .right-box li {
-    margin-bottom: 6px;
+    margin-bottom: 8px;
 }
 
-.section2, .section-professor, .section-responsaveis, .section-direcao {
+.section2 {
     display: flex;
     flex-direction: column;
     gap: 12px;
 }
 
-.section2 h2, .section-professor h2, .section-responsaveis h2, .section-direcao h2 {
-    font-size: 1.2rem;
-    color: #0056b3;
-}
-
-.section2 p, .section-professor p, .section-responsaveis p, .section-direcao p {
-    font-size: 1rem;
-    line-height: 1.6;
+/* ==========================================================================
+   7. OUTRAS PÁGINAS (PROFESSOR, RESPONSÁVEIS E DIREÇÃO)
+   ========================================================================== */
+.section-professor, 
+.section-responsaveis, 
+.section-direcao {
+    display: flex;
+    flex-direction: column;
+    gap: 14px;
 }
 
 .topo-informacoes {
@@ -141,8 +192,11 @@ section {
     justify-content: space-between;
     align-items: center;
     gap: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    padding-bottom: 10px;
 }
 
+/* Estrutura de Metas em 2 Colunas */
 .metas-container {
     display: flex;
     justify-content: space-between;
@@ -153,30 +207,135 @@ section {
     list-style: none;
     display: flex;
     flex-direction: column;
-    gap: 10px;
+    gap: 12px;
 }
 
 .metas-lista { width: 60%; }
 .status-lista { width: 35%; }
 
-.metas-lista li, .status-lista li, .lista-turmas li {
-    font-size: 1rem;
-    line-height: 1.5;
-}
-
+/* Indicadores Lado a Lado (Direção)
+   MUDANÇA: Formatação em pequenos cards de destaque com fundo diferenciado */
 .cards-indicadores {
     display: flex;
     justify-content: flex-start;
-    gap: 40px;
+    gap: 20px;
     margin-top: 5px;
+    flex-wrap: wrap;
 }
 
-footer {
-    border: 2px solid #0056b3;
-    border-radius: 10px;
+.cards-indicadores p {
     background-color: #ffffff;
-    padding: 15px;
+    padding: 12px 18px;
+    border-radius: 8px;
+    border: 1px solid #e2e8f0;
+    font-size: 0.95rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+}
+
+.cards-indicadores strong {
+    color: #0284c7;
+    font-size: 1.1rem;
+}
+
+/* ==========================================================================
+   8. NOVO: COMPONENTES PROFISSIONAIS (STATUS & BOTÕES)
+   - Adicionados para estilizar textos como [ Concluída ] ou [ Exibir ]
+   ========================================================================== */
+/* Badges de Status Coloridas */
+.badge {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 12px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+
+.badge-concluido { background-color: #d1fae5; color: #065f46; }
+.badge-andamento { background-color: #fef3c7; color: #92400e; }
+.badge-pendente  { background-color: #f1f5f9; color: #475569; }
+
+/* Botão de Ação Estilizado (para links de download ou "Exibir") */
+.btn-acao {
+    display: inline-block;
+    padding: 8px 16px;
+    background-color: #0284c7;
+    color: #ffffff;
+    border-radius: 6px;
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 500;
+    transition: background-color 0.2s ease;
+}
+
+.btn-acao:hover {
+    background-color: #0369a1;
+}
+
+/* ==========================================================================
+   9. RODAPÉ (FOOTER)
+   ========================================================================== */
+footer {
+    border: 1.5px solid #0284c7;
+    border-radius: 12px;
+    background-color: #ffffff;
+    padding: 16px;
     text-align: center;
     font-size: 0.9rem;
-    color: #4a5568;
+    color: #64748b;
+    box-shadow: 0 4px 12px rgba(2, 132, 199, 0.08);
+}
+
+/* ==========================================================================
+   10. REGRAS DE RESPONSIVIDADE (CELULARES E TABLETS)
+   - Garante adaptação total em telas pequenas sem distorção.
+   ========================================================================== */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    main {
+        padding: 16px;
+    }
+
+    section {
+        padding: 15px;
+    }
+
+    .section1 {
+        flex-direction: column;
+    }
+
+    .left-box, .right-box {
+        width: 100%;
+    }
+
+    .topo-informacoes {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .metas-container {
+        flex-direction: column;
+        gap: 12px;
+    }
+
+    .metas-lista, .status-lista {
+        width: 100%;
+    }
+
+    .cards-indicadores {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    nav {
+        gap: 8px;
+    }
+
+    nav a {
+        font-size: 0.85rem;
+        padding: 6px 12px;
+    }
 }
