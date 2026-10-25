@@ -1,0 +1,499 @@
+@import url('https://fonts.googleapis.com/css2?family=Fredoka:wght@400;500;600;700&family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Open Sans', sans-serif;
+    color: #333333;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    width: 100%;
+    background: url('fundo.png') center / cover no-repeat fixed;
+}
+
+main {
+    width: 100%;
+    max-width: 1180px;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
+}
+
+
+h1, h2, h3, h4, button, select, label, nav a, .btn-cadastrar, .status-tag, .btn-ver-pdi {
+    font-family: 'Fredoka', sans-serif;
+}
+
+h1, h2, h3 { color: #1D58B0; }
+
+p {
+    font-size: 14.5px;
+    line-height: 1.6;
+    color: #4A5568;
+}
+
+.card-base, .bem-vindo, .assistente, .metas, .linha-tempo, .conquistas, 
+.section2, .painel-header, .gerenciar-metas, .diario-conquistas, 
+.painel-header-responsaveis, .card-responsaveis, .card-direcao, .card-cadastro-container {
+    background-color: #FFFFFF;
+    border-radius: 32px;
+    padding: 30px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.04);
+}
+
+
+header {
+    width: 100%;
+    max-width: 1180px;
+    background-color: #FFFFFF;
+    border-radius: 50px;
+    padding: 12px 35px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+    margin-bottom: 22px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 15px;
+}
+
+nav img {
+    height: 120px;
+    object-fit: contain;
+}
+
+nav a {
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: 600;
+    color: #1A1A1A;
+    padding: 8px 24px;
+    border-radius: 20px;
+    transition: all 0.2s ease;
+}
+
+nav a.active, nav a:hover {
+    background-color: #E2EFFC;
+    color: #2563EB;
+}
+
+
+.section1 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    width: 100%;
+}
+
+.bem-vindo { grid-column: span 2; }
+.bem-vindo h1 { font-size: 28px; margin-bottom: 12px; }
+
+.assistente { grid-column: span 1; background-color: #EBF7F1; }
+.assistente h2 { color: #2E7D5E; font-size: 22px; margin-bottom: 12px; }
+
+.metas, .linha-tempo, .conquistas { grid-column: span 1; text-align: center; }
+.metas h3, .linha-tempo h3, .conquistas h3 { font-size: 20px; margin-bottom: 12px; }
+
+.section2 { background-color: #DDEEFE; padding: 32px 42px; }
+.section2 h3 { font-size: 24px; margin-bottom: 12px; }
+
+/* Configuração Professor */
+.painel-header {
+    padding: 20px 35px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.painel-header h1 { font-size: 28px; font-weight: 700; }
+
+.acoes-painel { display: flex; align-items: center; gap: 20px; }
+
+.btn-cadastrar {
+    background-color: #3BB8B2;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-size: 15px;
+    font-weight: 600;
+    padding: 10px 24px;
+    border-radius: 25px;
+    transition: background 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-cadastrar:hover { background-color: #319B96; }
+.linha-divisoria { width: 2px; height: 35px; background-color: #CBD5E1; }
+
+.select-aluno-container { display: flex; align-items: center; gap: 12px; }
+.select-aluno-container label { font-size: 14.5px; font-weight: 600; color: #1A1A1A; }
+
+.user-select-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background-color: #E2EFFC;
+    border-radius: 25px;
+    padding: 8px 18px;
+}
+
+.select-aluno-container select {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    color: #1D58B0;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.gerenciar-metas h2, .diario-conquistas h2 { font-size: 22px; margin-bottom: 20px; }
+.lista-metas { display: flex; flex-direction: column; gap: 15px; }
+
+.meta-item { display: grid; grid-template-columns: 1.8fr 1.2fr; gap: 20px; }
+
+.meta-nome, .meta-status {
+    background-color: #F4F8FA;
+    padding: 16px 24px;
+    border-radius: 18px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+}
+
+.meta-nome { color: #1D58B0; gap: 10px; }
+.meta-status { justify-content: space-between; transition: all 0.2s ease; }
+
+.meta-status select {
+    border: none;
+    background: transparent;
+    font-size: 15px;
+    font-weight: 600;
+    outline: none;
+    cursor: pointer;
+}
+
+
+.meta-status.status-concluido { background-color: #DCFCE7; }
+.meta-status.status-concluido label, .meta-status.status-concluido select { color: #166534; }
+
+.meta-status.status-em-andamento { background-color: #FEF9C3; }
+.meta-status.status-em-andamento label, .meta-status.status-em-andamento select { color: #854D0E; }
+
+.meta-status.status-nao-iniciado { background-color: #FEE2E2; }
+.meta-status.status-nao-iniciado label, .meta-status.status-nao-iniciado select { color: #991B1B; }
+
+
+.form-diario { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+
+.campo-texto textarea {
+    width: 100%;
+    height: 110px;
+    border: 1px solid #D0DCEB;
+    border-radius: 20px;
+    padding: 16px;
+    font-size: 13.5px;
+    color: #4A5568;
+    resize: none;
+    outline: none;
+}
+
+.btn-upload {
+    width: 100%;
+    height: 110px;
+    background-color: #E2EFFC;
+    border: 1px solid #D0DCEB;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #1D58B0;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+/* Configuração Responsáveis */
+.painel-header-responsaveis { text-align: center; padding: 20px 35px; }
+.painel-header-responsaveis h4 { font-size: 32px; font-weight: 700; }
+
+.grid-responsaveis { display: grid; grid-template-columns: 1fr 1.1fr 1fr; gap: 22px; width: 100%; }
+.card-responsaveis { padding: 28px; display: flex; flex-direction: column; gap: 18px; }
+.card-responsaveis h2 { font-size: 20px; text-align: center; }
+
+
+.post-conquista { background-color: #F8FAFC; border-radius: 20px; padding: 15px; display: flex; flex-direction: column; gap: 10px; }
+.box-imagem { width: 100%; height: 140px; border-radius: 14px; overflow: hidden; background-color: #E2EFFC; }
+.box-imagem img { width: 100%; height: 100%; object-fit: cover; }
+.post-conquista p { font-size: 12.5px; color: #555; text-align: center; }
+
+
+.lista-metas-familia { display: flex; flex-direction: column; gap: 14px; }
+.meta-box {
+    border: 1.5px solid #D0DCEB;
+    border-radius: 20px;
+    padding: 14px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+    text-align: center;
+}
+
+.titulo-meta { font-size: 14.5px; font-weight: 600; color: #1D58B0; }
+.status-tag { font-size: 13px; font-weight: 600; padding: 6px 20px; border-radius: 20px; width: 85%; }
+.status-tag.concluida { background-color: #DCFCE7; color: #166534; }
+.status-tag.em-andamento { background-color: #FEF9C3; color: #854D0E; }
+.status-tag.nao-iniciada { background-color: #FEE2E2; color: #991B1B; }
+
+.resumo-ia-box { background-color: #EBF7F1; border-radius: 20px; padding: 18px; margin-top: 5px; }
+.resumo-ia-box h3 { font-size: 15px; color: #2E7D5E; margin-bottom: 8px; }
+
+
+.calendario-box {
+    background-color: #F8FAFC;
+    border: 1px solid #E2E8F0;
+    border-radius: 24px;
+    padding: 18px;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.cal-header { display: flex; justify-content: space-between; align-items: center; color: #1D58B0; font-weight: 600; }
+.cal-dias-semana, .cal-grid-dias { display: grid; grid-template-columns: repeat(7, 1fr); text-align: center; }
+.cal-dias-semana { font-size: 11px; color: #64748B; font-weight: 600; }
+.cal-grid-dias { gap: 4px; font-size: 12px; color: #334155; }
+.cal-grid-dias span { padding: 6px 2px; border-radius: 12px; display: flex; align-items: center; justify-content: center; }
+
+.dia-destaque.artes, .evento-item.roxo { background-color: #F3E8FF; color: #6B21A8; }
+.dia-destaque.reuniao, .evento-item.azul { background-color: #E0F2FE; color: #0369A1; }
+
+.eventos-box { display: flex; flex-direction: column; gap: 12px; margin-top: 5px; }
+.evento-item { border-radius: 20px; padding: 12px 18px; display: flex; justify-content: space-between; font-size: 13.5px; font-weight: 500; }
+
+/* Configuração Coordenação*/
+.gestao-top { display: flex; justify-content: space-between; align-items: center; margin-bottom: 20px; flex-wrap: wrap; gap: 15px; }
+.gestao-top h1 { font-size: 24px; font-weight: 700; }
+
+.tag-escola {
+    border: 1.5px solid #2563EB;
+    color: #1D58B0;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 22px;
+    border-radius: 20px;
+    background-color: #F4F8FA;
+}
+
+.busca-form { display: flex; gap: 15px; margin-bottom: 25px; }
+.input-busca-wrapper { flex: 1; position: relative; display: flex; align-items: center; }
+.input-busca-wrapper input {
+    width: 100%;
+    background-color: #F1F5F9;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 45px 12px 20px;
+    font-size: 14px;
+    outline: none;
+}
+.input-busca-wrapper .icon-lupa { position: absolute; right: 18px; font-size: 16px; color: #64748B; pointer-events: none; }
+
+.btn-pesquisar {
+    background-color: #E6F7F0;
+    color: #2E7D5E;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 45px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+
+.kpi-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.kpi-card { border-radius: 20px; padding: 20px; display: flex; flex-direction: column; }
+.kpi-card.azul { background-color: #E2EFFC; }
+.kpi-card.verde { background-color: #EBF7F1; }
+.kpi-card.amarelo { background-color: #FFFBEB; }
+
+.kpi-numero { font-size: 36px; font-weight: 700; line-height: 1; }
+.kpi-card.azul .kpi-numero { color: #1D58B0; }
+.kpi-card.verde .kpi-numero { color: #2E7D5E; }
+.kpi-card.amarelo .kpi-numero { color: #D97706; }
+.kpi-rotulo { font-size: 14px; font-weight: 600; color: #4A5568; margin-top: 6px; }
+
+
+.panorama-ia { background-color: #EBF7F1; display: flex; justify-content: space-between; align-items: center; gap: 20px; }
+.btn-relatorio {
+    background-color: #38B6FF;
+    color: #FFFFFF;
+    border: none;
+    border-radius: 30px;
+    padding: 15px 30px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    white-space: nowrap;
+}
+
+.lista-estudantes { display: flex; flex-direction: column; gap: 15px; }
+.estudante-item {
+    border: 1px solid #E2E8F0;
+    border-radius: 20px;
+    padding: 16px 24px;
+    display: grid;
+    grid-template-columns: 1.2fr 1.2fr 2fr 1fr;
+    align-items: center;
+    gap: 20px;
+}
+
+.estudante-laudo { font-size: 13.5px; font-weight: 600; padding: 10px 18px; border-radius: 20px; text-align: center; }
+.estudante-laudo.roxo { background-color: #FAF5FF; color: #7E22CE; }
+.estudante-laudo.amarelo { background-color: #FFFBEB; color: #B45309; }
+
+.estudante-progresso { display: flex; align-items: center; gap: 12px; font-size: 12px; color: #1D58B0; font-weight: 600; }
+.bar-container { flex: 1; height: 12px; background-color: #E2EFFC; border-radius: 10px; overflow: hidden; }
+.bar-fill { height: 100%; border-radius: 10px; }
+.bar-fill.verde { background-color: #3BB8B2; }
+.bar-fill.amarelo { background-color: #F59E0B; }
+
+.btn-ver-pdi {
+    background-color: #E2EFFC;
+    color: #1D58B0;
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 10px 20px;
+    border-radius: 20px;
+    text-align: center;
+}
+
+/* Cadastro de Aluno */
+.cadastro-header { display: flex; justify-content: space-between; margin-bottom: 25px; }
+.btn-voltar {
+    display: inline-block;
+    background-color: #F1F5F9;
+    color: #475569;
+    text-decoration: none;
+    font-size: 13.5px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 20px;
+    margin-bottom: 15px;
+}
+
+.mensagem-acolhimento-img img { max-width: 210px; height: auto; }
+
+.grid-cadastro-duplo { display: grid; grid-template-columns: 1fr 1fr; gap: 25px; margin-bottom: 25px; }
+.bloco-card { border: 1.5px solid #E2E8F0; border-radius: 24px; padding: 22px; display: flex; flex-direction: column; gap: 16px; }
+.bloco-titulo { background-color: #E2EFFC; border-radius: 14px; padding: 10px 16px; font-size: 15px; font-weight: 600; color: #1D58B0; }
+
+.campo-grupo { display: flex; flex-direction: column; gap: 6px; }
+.campo-grupo label { font-size: 13.5px; font-weight: 600; color: #334155; }
+.campo-grupo input[type="text"], .select-wrapper select {
+    width: 100%;
+    border: 1px solid #CBD5E1;
+    border-radius: 14px;
+    padding: 10px 14px;
+    font-size: 13.5px;
+    outline: none;
+}
+
+.btn-upload-input {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 10px 14px;
+    border: 1px solid #CBD5E1;
+    border-radius: 14px;
+    background-color: #F8FAFC;
+    color: #64748B;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.grid-inferior-cadastro { display: grid; grid-template-columns: 2fr 1fr; gap: 25px; align-items: center; margin-bottom: 30px; }
+.bloco-estrategias { background-color: #FEFCE8; border: 1px solid #FEF08A; border-radius: 20px; padding: 20px; }
+.estrategias-header { font-size: 14.5px; font-weight: 600; color: #15803D; margin-bottom: 10px; }
+.bloco-estrategias textarea { width: 100%; height: 80px; border: 1px solid #E2E8F0; border-radius: 14px; padding: 12px; font-size: 13px; resize: none; outline: none; }
+
+.mensagem-passos-img img { max-width: 190px; height: auto; }
+
+.acoes-form-cadastro { display: flex; justify-content: flex-end; align-items: center; gap: 15px; }
+.btn-cancelar { background-color: #E2E8F0; color: #475569; text-decoration: none; font-size: 14px; font-weight: 600; padding: 12px 30px; border-radius: 25px; }
+.btn-salvar-pdi { background-color: #2563EB; color: #FFFFFF; border: none; font-size: 14px; font-weight: 600; padding: 12px 30px; border-radius: 25px; cursor: pointer; }
+
+
+footer {
+    width: 100%;
+    max-width: 1180px;
+    background-color: #FFFFFF;
+    border-radius: 30px;
+    padding: 16px;
+    text-align: center;
+    margin-top: 20px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.03);
+}
+
+footer p { font-size: 13.5px; color: #555; font-weight: 600; }
+
+/* Responsividade */
+@media (max-width: 992px) {
+    body { padding: 20px 15px; }
+    header { border-radius: 30px; padding: 20px 25px; }
+    nav { justify-content: center; flex-direction: column; align-items: center; gap: 15px; }
+    nav img { height: 110px; max-width: 80%; }
+    nav a { font-size: 15px; padding: 8px 20px; }
+
+    .section1 { grid-template-columns: 1fr 1fr; }
+    .bem-vindo, .assistente { grid-column: span 2; }
+    .metas, .linha-tempo, .conquistas { grid-column: span 1; }
+
+    .painel-header { flex-direction: column; align-items: flex-start; gap: 15px; }
+    .acoes-painel { width: 100%; justify-content: space-between; flex-wrap: wrap; }
+    .meta-item, .form-diario, .grid-responsaveis, .grid-cadastro-duplo, .grid-inferior-cadastro { grid-template-columns: 1fr; }
+
+    .kpi-grid { grid-template-columns: 1fr 1fr; }
+    .panorama-ia { flex-direction: column; align-items: flex-start; }
+    .btn-relatorio { width: 100%; text-align: center; }
+    .estudante-item { grid-template-columns: 1fr 1fr; }
+    .cadastro-header { flex-direction: column; gap: 15px; }
+}
+
+@media (max-width: 600px) {
+    header { padding: 20px 15px; }
+    nav img { height: 150px; max-width: 90%; }
+    nav a { width: 100%; text-align: center; padding: 10px 0; }
+
+    .section1 { grid-template-columns: 1fr; }
+    .bem-vindo, .assistente, .metas, .linha-tempo, .conquistas { grid-column: span 1; }
+    .section2 { padding: 20px; }
+
+    .acoes-painel, .select-aluno-container, .busca-form { flex-direction: column; align-items: stretch; }
+    .linha-divisoria { display: none; }
+    .btn-pesquisar, .btn-cancelar, .btn-salvar-pdi { width: 100%; text-align: center; }
+
+    .kpi-grid, .estudante-item { grid-template-columns: 1fr; text-align: center; }
+    .estudante-progresso { flex-direction: column; }
+    .card-cadastro-container { padding: 20px; }
+    .acoes-form-cadastro { flex-direction: column-reverse; width: 100%; }
+}
+
+@media (max-width: 480px) {
+    body { padding: 10px; }
+    nav img { height: 85px; }
+    .painel-header h1, .cadastro-header h1, .gestao-top h1 { font-size: 20px; }
+    .card-responsaveis, .card-direcao, .gerenciar-metas, .diario-conquistas { padding: 18px; border-radius: 20px; }
+}

@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastrar Novo Aluno e PDI - Trilha PDI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <main>
+        <section class="card-cadastro-container">
+            <!-- TOPO COM BOTÃO DE VOLTAR E IMAGEM DE ACOLHIMENTO -->
+            <div class="cadastro-header">
+                <div class="header-left">
+                    <a href="professor.html" class="btn-voltar">&lt; Voltar para o Painel</a>
+                    <h1>Cadastrar Novo Aluno e PDI</h1>
+                    <p class="subtitulo-cadastro">Iniciar uma nova jornada de acompanhamento e conquistas</p>
+                </div>
+                
+                <!-- IMAGEM DE ACOLHIMENTO NO LUGAR DO TEXTO -->
+                <div class="mensagem-acolhimento-img">
+                    <img src="Trilha Pdi (computador) tela de cadastro.png" alt="Aqui tem propósito, acolhimento e futuro!">
+                </div>
+            </div>
+
+            <!-- FORMULÁRIO DE CADASTRO -->
+            <form class="form-cadastrar-aluno">
+                <div class="grid-cadastro-duplo">
+                    
+                    <!-- BLOCO 1: IDENTIFICAÇÃO -->
+                    <div class="bloco-card">
+                        <div class="bloco-titulo">
+                            <span>👤 Identificação</span>
+                        </div>
+                        
+                        <div class="campo-grupo">
+                            <label for="nome-aluno">Nome Completo do Aluno</label>
+                            <input type="text" id="nome-aluno" name="nome-aluno" placeholder="Digite o nome completo">
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="turma-aluno">Turma / Ano Escolar</label>
+                            <div class="select-wrapper">
+                                <select id="turma-aluno" name="turma-aluno">
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="1ano">1º Ano A</option>
+                                    <option value="2ano">2º Ano A</option>
+                                    <option value="3ano">3º Ano A</option>
+                                    <option value="4ano">4º Ano A</option>
+                                    <option value="5ano">5º Ano B</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="profissionais">Profissionais de Acompanhamento</label>
+                            <input type="text" id="profissionais" name="profissionais" placeholder="Ex: Psicopedagoga, Fonoaudióloga">
+                        </div>
+                    </div>
+
+                    <!-- BLOCO 2: DIAGNÓSTICOS -->
+                    <div class="bloco-card">
+                        <div class="bloco-titulo">
+                            <span>💙 Diagnósticos</span>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label for="status-diagnostico">Status do Diagnóstico</label>
+                            <div class="select-wrapper">
+                                <select id="status-diagnostico" name="status-diagnostico">
+                                    <option value="" disabled selected>Selecione</option>
+                                    <option value="laudado">Laudado</option>
+                                    <option value="investigacao">Em investigação</option>
+                                    <option value="sem-diagnostico">Sem diagnóstico formal</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="campo-grupo">
+                            <label>Laudo / Especificação</label>
+                            <div class="campo-upload-laudo">
+                                <label for="upload-laudo" class="btn-upload-input">
+                                    <span>Anexar Laudo em PDF/Imagem</span>
+                                </label>
+                                <input type="file" id="upload-laudo" name="upload-laudo" accept=".pdf,image/*" style="display: none;">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- BLOCO INFERIOR COM IMAGEM DE PEQUENOS PASSOS -->
+                <div class="grid-inferior-cadastro">
+                    <div class="bloco-estrategias">
+                        <div class="estrategias-header">
+                            💡 <span>Estratégias de Regulação e Mediação Comportamental</span>
+                        </div>
+                        <textarea placeholder="Ex: Quando o estudante estiver desregulado, encaminhar à horta com a estagiária para recuperar o foco antes da atividade."></textarea>
+                    </div>
+
+                    <!-- IMAGEM DE PEQUENOS PASSOS NO LUGAR DO TEXTO -->
+                    <div class="mensagem-passos-img">
+                        <img src="Trilha Pdi (computador) tela de cadastro (1).png" alt="Pequenos passos, grandes avanços!">
+                    </div>
+                </div>
+
+                <!-- BARRAS DE AÇÃO (BOTÕES SALVAR E CANCELAR) -->
+                <div class="acoes-form-cadastro">
+                    <a href="professor.html" class="btn-cancelar">Cancelar</a>
+                    <button type="submit" class="btn-salvar-pdi">SALVAR E CRIAR PDI</button>
+                </div>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>

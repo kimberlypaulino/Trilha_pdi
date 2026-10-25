@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Painel do Educador AEE - Trilha PDI</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <img src="logo.png" alt="Logo do Trilha PDI">
+            <a href="index.html">Início</a>
+            <a href="professor.html" class="active">Professor</a>
+            <a href="responsaveis.html">Responsáveis</a>
+            <a href="direcao.html">Coordenação</a>
+        </nav>
+    </header>
+
+    <main>
+        <section class="painel-header">
+            <div class="titulo-painel">
+                <h2>✨ Painel do Educador AEE</h2>
+            </div>
+
+            <div class="acoes-painel">
+                <a href="cadastrar-aluno.html" class="btn-cadastrar">Cadastrar Aluno</a>
+                <div class="linha-divisoria"></div>
+                <div class="select-aluno-container">
+                    <label for="selecione-aluno">Selecione o aluno:</label>
+                    <div class="user-select-wrapper">
+                        <span class="icon-user">👤</span>
+                        <select id="selecione-aluno" name="aluno">
+                            <option value="clarisse" selected>Clarisse Guimarães</option>
+                            <option value="joao">João Pedro</option>
+                            <option value="maria">Maria Eduarda</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+    
+        <section class="gerenciar-metas">
+            <h2>Gerenciar Metas do PDI - Clarisse Guimarães</h2>
+            
+            <div class="lista-metas">
+                <div class="meta-item">
+                    <div class="meta-nome">
+                        🎯 <span>Meta: Leitura de texto curtos</span>
+                    </div>
+                    <div class="meta-status">
+                        <label for="status-1">Status:</label>
+                        <select id="status-1" name="status-1">
+                            <option value="nao-iniciado">Não iniciado</option>
+                            <option value="em-andamento" selected>Em andamento</option>
+                            <option value="concluido">Concluído</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="meta-item">
+                    <div class="meta-nome">
+                        🎯 <span>Meta: Foco em tarefas (15 min)</span>
+                    </div>
+                    <div class="meta-status">
+                        <label for="status-2">Status:</label>
+                        <select id="status-2" name="status-2">
+                            <option value="nao-iniciado">Não iniciado</option>
+                            <option value="em-andamento" selected>Em andamento</option>
+                            <option value="concluido">Concluído</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div class="meta-item">
+                    <div class="meta-nome">
+                        🎯 <span>Meta: Autonomia na organização dos materiais</span>
+                    </div>
+                    <div class="meta-status">
+                        <label for="status-3">Status:</label>
+                        <select id="status-3" name="status-3">
+                            <option value="nao-iniciado" selected>Não iniciado</option>
+                            <option value="em-andamento">Em andamento</option>
+                            <option value="concluido">Concluído</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="diario-conquistas">
+            <h2>📷 Registrar no Diário de Conquistas (Visível aos responsáveis)</h2>
+            
+            <form class="form-diario">
+                <div class="campo-texto">
+                    <textarea placeholder="Digite o avanço observado no aluno"></textarea>
+                </div>
+                
+                <div class="campo-upload">
+                    <label for="anexo-foto" class="btn-upload">
+                        Anexar foto da atividade
+                    </label>
+                    <input type="file" id="anexo-foto" accept="image/*" style="display: none;">
+                </div>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>Feito por: Ana Luisa, Kimberly, Natalia, Vitória</p>
+    </footer>
+</body>
+</html>
